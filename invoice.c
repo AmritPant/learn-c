@@ -178,7 +178,7 @@ void createNewInvoice() {
  
 
 }  
-    createNewInvoice();
+createNewInvoice();
  char saveOrNot;
  printf("Do you want to save above Invoice (y/n) ? ");
  scanf("%c", &saveOrNot); 
