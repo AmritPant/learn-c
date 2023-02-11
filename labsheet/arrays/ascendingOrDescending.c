@@ -19,11 +19,36 @@ int main () {
         scanf("%d", &arr[i]);
     }
 
-    printf("First Element: %d \n", arr[0]);
+ printf("Your Given Array is ");  
+    for(int i = 0; i < n; i++){
+        printf("%d,", arr[i]);  
+    }  
+    for(int i=0; i<n; i++ ){
+        for(int j=i+1; j<n; j++){
 
-    // Rearraging the Order
-  
+            if(mode == 1) {
+            if(arr[i] > arr[j] ) {
+                int temp = arr[j];
+                arr[j] = arr[i];
+                arr[i] = temp;
+            } 
+            } else if (mode == 2) {
+            if(arr[i] < arr[j] ) {
+                int temp = arr[j];
+                arr[j] = arr[i];
+                arr[i] = temp;
+            } 
+ 
+            }
 
-    printf("\n First Element After Ascending: %d", arr[0]);
- return 0;
+       }
+    }
+
+        printf("\n");  
+        printf("Your Sorted Array is ");  
+    for(int i = 0; i < n; i++){
+        printf("%d,", arr[i]);  
+    }
+
+  return 0;
 }
